@@ -1,0 +1,914 @@
+/*
+@File: Art Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+** - Preloader Area CSS
+** - Navbar Area CSS
+** - Banner Area CSS
+** - Course Area CSS
+** - Story Area CSS
+** - Contact Area CSS
+** - Footer Area CSS
+
+*******************************************
+*/
+/*
+Default Style
+============================*/
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;600&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+  color: #7a7e9a;
+}
+
+a {
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #293a5c;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: rgba(69, 86, 130, 0.8);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-control {
+  height: 50px;
+  color: #293a5c;
+  border: 1px solid #e8e8e8;
+  border-radius: 50px;
+  padding: 0;
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 15px rgba(38, 38, 38, 0.05);
+          box-shadow: 0px 8px 15px rgba(38, 38, 38, 0.05);
+  border-radius: 30px;
+  width: 80%;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: rgba(16, 41, 80, 0.5);
+  font-size: 16px;
+}
+
+.form-control:-ms-input-placeholder {
+  color: rgba(16, 41, 80, 0.5);
+  font-size: 16px;
+}
+
+.form-control::-ms-input-placeholder {
+  color: rgba(16, 41, 80, 0.5);
+  font-size: 16px;
+}
+
+.form-control::placeholder {
+  color: rgba(16, 41, 80, 0.5);
+  font-size: 16px;
+}
+
+.form-control:focus {
+  color: #000000;
+  background-color: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  outline: 0;
+  border: 1px solid #12dafe;
+}
+
+.form-control:hover:focus,
+.form-control:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+.ptb-75 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+/** Animation Css **/
+@-webkit-keyframes fadeInRight1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes fadeInRight1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes overlay_right {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes overlay_right {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/** Section tittle Css **/
+.section-title {
+  position: relative;
+  max-width: 695px;
+  margin: -8px auto 60px;
+  text-align: center;
+}
+
+.section-title span {
+  position: relative;
+}
+
+.section-title h2 {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 60px;
+  text-align: center;
+  color: #102950;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title h2::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -20px;
+  left: 140px;
+  z-index: -1;
+}
+
+.section-title h2::after {
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 90%;
+  top: -20px;
+  left: 130px;
+  -webkit-animation: rotaed360 10s infinite linear;
+          animation: rotaed360 10s infinite linear;
+}
+
+/** Box Btn Css **/
+.box-btn {
+  font-size: 16px;
+  color: #ffffff;
+  padding: 12px 25px;
+  line-height: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #12dafe;
+  border: 1px solid #12dafe;
+}
+
+.box-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 200%;
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(75%, #fff), to(#fff));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #fff 75%, #fff);
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.box-btn:hover {
+  color: #fff;
+}
+
+.box-btn:hover::before {
+  left: -200%;
+}
+
+.p_absoulte {
+  position: absolute;
+}
+
+.slider-area {
+  position: relative;
+}
+
+.slider-area .slider-content {
+  max-width: 540px;
+  margin-left: auto;
+}
+
+.slider-area .slider-content h1 {
+  font-family: "Abril Fatface", cursive;
+  color: #2f2f2f;
+  font-size: 85px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: block;
+  -webkit-animation: fadeInUp2 1s both 0.8s;
+          animation: fadeInUp2 1s both 0.8s;
+  margin-bottom: 20px;
+}
+
+.slider-area .slider-content h1::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10%;
+  background: #12dafe;
+  bottom: 5px;
+  z-index: -1;
+}
+
+.slider-area .slider-content h1::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10%;
+  background: #12dafe;
+  top: 75px;
+  z-index: -1;
+  left: 0;
+}
+
+.slider-area .slider-content .search {
+  position: relative;
+  -webkit-animation: fadeInUp2 1.3s both 0.9s;
+          animation: fadeInUp2 1.3s both 0.9s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slider-area .slider-content .search .form-control {
+  max-width: 85%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+}
+
+.slider-area .slider-content .search .search-btn {
+  background: transparent;
+  border: none;
+  color: #f5faff;
+  position: absolute;
+  top: 4px;
+  right: 85px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slider-area .slider-content .search .search-btn i {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  background: #12dafe;
+}
+
+.slider-area .slider-content p {
+  color: #2f2f2f;
+  margin-bottom: 30px;
+  -webkit-animation: fadeInUp2 1.4s both 0.7s;
+          animation: fadeInUp2 1.4s both 0.7s;
+}
+
+.slider-area .slider-img {
+  -webkit-animation: fadeInRight1 0.9s both 0.5s;
+          animation: fadeInRight1 0.9s both 0.5s;
+  position: relative;
+}
+
+.slider-area .slider-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: #12dafe;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 0.9s linear;
+  transition: width 0.9s linear;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.slider-area .slider-img .overlay_img {
+  height: 100%;
+  top: 0;
+  background: #12dafe;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
+  z-index: 1;
+}
+
+section.section.slider-area.fp-section.fp-table.active .slider-img .overlay_img {
+  -webkit-animation: overlay_right 0.8s both 1.1s;
+          animation: overlay_right 0.8s both 1.1s;
+}
+
+section.section.slider-area.fp-section.fp-table.active .slider-img::before {
+  -webkit-animation: fadeOut 0.8s both 1.1s;
+          animation: fadeOut 0.8s both 1.1s;
+}
+
+.outfit-area {
+  position: relative;
+  overflow: hidden;
+}
+
+.outfit-area .outfit-tittle {
+  position: relative;
+}
+
+.outfit-area .outfit-tittle h2 {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #2f2f2f;
+  -webkit-text-decoration-color: #12dafe;
+          text-decoration-color: #12dafe;
+  position: relative;
+  left: 250px;
+}
+
+.outfit-area .outfit-tittle h2 span {
+  margin-left: 200px;
+}
+
+.outfit-area .outfit-tittle p {
+  max-width: 300px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.outfit-area .outfit-img {
+  top: -20px;
+  position: relative;
+  -webkit-animation: fadeInUp2 1.3s both 0.9s;
+          animation: fadeInUp2 1.3s both 0.9s;
+}
+
+.outfit-area .outfit-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: #feccc1;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 0.9s linear;
+  transition: width 0.9s linear;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.outfit-area .outfit-img .overlay_img {
+  height: 100%;
+  top: 0;
+  background: #feccc1;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
+  z-index: 1;
+}
+
+.outfit-area .outfit-img-1 {
+  position: relative;
+  right: -260px;
+  z-index: 2;
+  bottom: -20px;
+}
+
+.outfit-area .outfit-img-1::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: #12dafe;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 0.9s linear;
+  transition: width 0.9s linear;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.outfit-area .outfit-img-1 .overlay_img {
+  height: 100%;
+  top: 0;
+  background: #12dafe;
+  right: auto;
+  left: 0;
+  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
+  z-index: 1;
+}
+
+.outfit-area .fp-slidesNav {
+  display: none;
+}
+
+section.section.outfit-area.fp-section.active .outfit-img-1 {
+  -webkit-animation: fadeInUp2 1.4s both 0.8s;
+          animation: fadeInUp2 1.4s both 0.8s;
+}
+
+section.section.outfit-area.fp-section.active .outfit-img-1 .overlay_img {
+  -webkit-animation: overlay_right 0.8s both 1.1s;
+          animation: overlay_right 0.8s both 1.1s;
+}
+
+section.section.outfit-area.fp-section.active .outfit-img {
+  -webkit-animation: fadeInRight1 0.9s both 0.5s;
+          animation: fadeInRight1 0.9s both 0.5s;
+}
+
+section.section.outfit-area.fp-section.active .outfit-img .overlay_img {
+  -webkit-animation: overlay_right 0.8s both 1.1s;
+          animation: overlay_right 0.8s both 1.1s;
+}
+
+section.section.outfit-area.fp-section.active .outfit-img-1::before {
+  -webkit-animation: fadeOut 0.8s both 1.1s;
+          animation: fadeOut 0.8s both 1.1s;
+}
+
+section.section.outfit-area.fp-section.active .outfit-img::before {
+  -webkit-animation: fadeOut 0.8s both 1.1s;
+          animation: fadeOut 0.8s both 1.1s;
+}
+
+.shop-area {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-area .tab-content {
+  margin-top: 25px;
+}
+
+.shop-area .tab-content .content h2 {
+  font-size: 45px;
+  color: #2f2f2f;
+  font-family: "Abril Fatface", cursive;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #12dafe;
+          text-decoration-color: #12dafe;
+  margin-bottom: 30px;
+}
+
+.shop-area .tab-content .content p {
+  color: #2f2f2f;
+}
+
+.shop-area .tab-content .slide .shop-img {
+  position: relative;
+}
+
+.shop-area .tab-content .slide .shop-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: #12dafe;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 0.9s linear;
+  transition: width 0.9s linear;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.shop-area .tab-content .slide .shop-img .overlay_img {
+  height: 100%;
+  top: 0;
+  background: #12dafe;
+  right: auto;
+  left: 0;
+  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
+  z-index: 1;
+}
+
+.shop-area .nav-tabs {
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 15px;
+}
+
+.shop-area .nav-tabs .nav-item .nav-link {
+  font-size: 18px;
+  color: #2f2f2f;
+}
+
+.shop-area .nav-tabs .nav-item .nav-link:hover {
+  border: none !important;
+}
+
+.shop-area .nav-tabs .nav-item .nav-link.active {
+  border: none;
+  border-bottom: 1px solid #2f2f2f;
+  color: #12dafe;
+}
+
+.shop-area .fp-controlArrow {
+  display: none;
+}
+
+.shop-area .fp-slidesNav {
+  left: 50% !important;
+  top: 85% !important;
+}
+
+.shop-area .fp-slidesNav ul li span {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #12dafe;
+  margin: 0px 10px 0 0px;
+}
+
+.shop-area #fp-nav ul li a.active span,
+.shop-area #fp-nav ul li:hover a.active span,
+.shop-area .fp-slidesNav ul li a.active span,
+.shop-area .fp-slidesNav ul li:hover a.active span {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 50%;
+  border: 5px solid #feccc1;
+  margin: 0px 10px 0 0px;
+}
+
+.shop-area #fp-nav ul li:hover a span,
+.shop-area .fp-slidesNav ul li:hover a span {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #feccc1;
+  margin: 0px 10px 0 0px;
+}
+
+.shop-area .fp-slides {
+  top: -40px;
+}
+
+section.section.shop-area.fp-section.active .shop-img .overlay_img {
+  -webkit-animation: overlay_right 0.8s both 1.1s;
+          animation: overlay_right 0.8s both 1.1s;
+}
+
+section.section.shop-area.fp-section.active .shop-img::before {
+  -webkit-animation: fadeOut 0.8s both 1.1s;
+          animation: fadeOut 0.8s both 1.1s;
+}
+
+.product-area {
+  position: relative;
+}
+
+.product-area .single-product {
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.product-area .single-product .pro-img {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.product-area .single-product .pro-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: #12dafe;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 0.9s linear;
+  transition: width 0.9s linear;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.product-area .single-product .pro-img .overlay_img {
+  height: 100%;
+  top: 0;
+  background: #feccc1;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
+  z-index: 1;
+}
+
+.product-area .single-product .pro-img .content {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  padding: 15px 20px;
+  left: -200px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.product-area .single-product .image-pop {
+  position: relative;
+}
+
+.product-area .single-product::before {
+  content: "";
+  height: 100%;
+  top: 0;
+  background: #feccc1;
+  right: 0;
+  left: auto;
+  -webkit-transition: width 1s linear;
+  transition: width 1s linear;
+  z-index: 1;
+  width: 0;
+}
+
+.product-area .single-product:hover::before {
+  width: 100%;
+}
+
+.product-area .single-product:hover .content {
+  left: 0;
+}
+
+.product-area .p1 {
+  margin-top: 36px;
+}
+
+.product-area .p2 {
+  margin-top: 44px;
+}
+
+.product-area .p3 {
+  max-width: 95%;
+}
+
+.product-area i.bx.bx-plus {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  line-height: 18px;
+  margin-left: 15px;
+}
+
+section.section.product-area.fp-section.active .pro-img .overlay_img {
+  -webkit-animation: overlay_right 0.8s both 1.1s;
+          animation: overlay_right 0.8s both 1.1s;
+}
+
+section.section.product-area.fp-section.active .pro-img::before {
+  -webkit-animation: fadeOut 0.8s both 1.1s;
+          animation: fadeOut 0.8s both 1.1s;
+}
+
+.contact-area {
+  position: relative;
+  background: #feccc1;
+  z-index: 1;
+}
+
+.contact-area .lines {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90vw;
+  z-index: -1;
+}
+
+.contact-area .lines,
+.contact-area .lines .line {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.contact-area .lines .line {
+  width: 1px;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.contact-area .lines .line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(75%, #ee0979), to(#ff6a00));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #ee0979 75%, #ff6a00);
+  -webkit-animation: run 7s 0s infinite;
+          animation: run 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.contact-area .lines .line:first-child {
+  margin-left: -25%;
+}
+
+.contact-area .lines .line:first-child:after {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.contact-area .lines .line:nth-child(3) {
+  margin-left: 25%;
+}
+
+.contact-area .lines .line:nth-child(3):after {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    top: -50%;
+  }
+  to {
+    top: 110%;
+  }
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  to {
+    top: 110%;
+  }
+}
+
+.contact-area .contact {
+  text-align: center;
+}
+
+.contact-area .contact a {
+  font-size: 25px;
+}
+/*# sourceMappingURL=style.css.map */
